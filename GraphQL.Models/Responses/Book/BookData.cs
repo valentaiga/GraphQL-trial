@@ -1,6 +1,4 @@
-using GraphQL.Api.Client.Models.Responses.Author;
-
-namespace GraphQL.Api.Client.Models.Responses.Book;
+namespace GraphQL.Models.Responses.Book;
 
 public class BookData
 {

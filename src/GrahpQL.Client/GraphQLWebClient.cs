@@ -1,7 +1,3 @@
-using GraphQL.Api.Client.Constants;
-using GraphQL.Api.Client.Models.Requests.Author;
-using GraphQL.Api.Client.Models.Responses.Author;
-
 namespace GraphQL.Api.Client;
 
 public class GraphQLWebClient : GraphQLWebClientBase, IAuthorWebClient

@@ -1,4 +1,4 @@
-namespace GraphQL.Api.Client.Models.Responses.Author;
+namespace GraphQL.Models.Responses.Author;
 
 public class AuthorWrap<TResponse>
 {

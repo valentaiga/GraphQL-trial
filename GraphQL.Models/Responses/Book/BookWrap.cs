@@ -1,4 +1,4 @@
-namespace GraphQL.Api.Client.Models.Responses.Book;
+namespace GraphQL.Models.Responses.Book;
 
 public class BookWrap<TResponse>
 {

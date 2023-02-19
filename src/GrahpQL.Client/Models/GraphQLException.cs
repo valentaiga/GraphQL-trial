@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace GraphQL.Api.Client.Models;
 
 public sealed class GraphQLException : Exception

@@ -1,8 +1,3 @@
-using GraphQL.Api.Client.Models;
-using GraphQL.Client.Http;
-using GraphQL.Client.Serializer.SystemTextJson;
-using static GraphQL.Api.Client.Models.OperationResult;
-
 namespace GraphQL.Api.Client;
 
 public abstract class GraphQLWebClientBase: IDisposable

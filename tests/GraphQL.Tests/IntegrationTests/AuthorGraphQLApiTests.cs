@@ -34,10 +34,10 @@ public class AuthorGraphQLApiTests
         var response = await _client.SendQueryAsync<AuthorWrap<AuthorResponse>>(request);
 
         Assert.Null(response.Errors);
-        var author = response.Data.Author?.Author;
+        var author = response.Data.Author.Author;
         Assert.NotNull(author);
-        author!.EnsureAuthorIsValid();
-        Assert.All(author!.Books, AssertExtensions.EnsureBookIsValid);
+        author.EnsureAuthorIsValid();
+        Assert.All(author.Books, AssertExtensions.EnsureBookIsValid);
     }
 
     [Fact]
@@ -63,12 +63,12 @@ public class AuthorGraphQLApiTests
         var response = await _client.SendQueryAsync<AuthorWrap<AuthorsResponse>>(request);
 
         Assert.Null(response.Errors);
-        var authors = response.Data.Author?.Authors;
+        var authors = response.Data.Author.Authors;
         Assert.NotNull(authors);
-        foreach (var author in authors!)
+        foreach (var author in authors)
         {
-            author!.EnsureAuthorIsValid();
-            Assert.All(author!.Books, AssertExtensions.EnsureBookIsValid);
+            author.EnsureAuthorIsValid();
+            Assert.All(author.Books, AssertExtensions.EnsureBookIsValid);
         }
     }
 
@@ -91,9 +91,9 @@ public class AuthorGraphQLApiTests
         var response = await _client.SendQueryAsync<AuthorWrap<CreateAuthorResponse>>(request);
 
         Assert.Null(response.Errors);
-        var author = response.Data.Author?.Create;
-        author!.EnsureAuthorIsValid();
-        Assert.Equal(name, author!.Name);
+        var author = response.Data.Author.Create;
+        author.EnsureAuthorIsValid();
+        Assert.Equal(name, author.Name);
     }
 
     [Fact]
@@ -118,9 +118,9 @@ public class AuthorGraphQLApiTests
         var response = await _client.SendQueryAsync<AuthorWrap<UpdateAuthorResponse>>(request);
 
         Assert.Null(response.Errors);
-        var author = response.Data.Author?.Update;
-        author!.EnsureAuthorIsValid();
-        Assert.Equal(newName, author!.Name);
+        var author = response.Data.Author.Update;
+        author.EnsureAuthorIsValid();
+        Assert.Equal(newName, author.Name);
     }
     
     [Fact]
@@ -154,6 +154,7 @@ public class AuthorGraphQLApiTests
         variables: new { id = AssertExtensions.NotExistingId });
       var response = await _client.SendQueryAsync<AuthorWrap<DeleteAuthorResponse>>(request);
 
-      Assert.NotEmpty(response.Errors);
+      Assert.NotNull(response.Errors);
+      Assert.NotEmpty(response.Errors!);
     }
 }
