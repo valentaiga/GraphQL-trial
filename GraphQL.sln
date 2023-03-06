@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Web", "src\GrahpQL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Tests", "tests\GraphQL.Tests\GraphQL.Tests.csproj", "{AE403F60-982E-499E-A957-56146F9658D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Models", "GraphQL.Models\GraphQL.Models.csproj", "{CC1CA832-4586-44A5-9726-1F4E21B999AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Models", "src\GraphQL.Models\GraphQL.Models.csproj", "{CC1CA832-4586-44A5-9726-1F4E21B999AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

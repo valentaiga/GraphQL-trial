@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\GraphQL.Models\GraphQL.Models.csproj" />
+      <ProjectReference Include="..\..\src\GraphQL.Models\GraphQL.Models.csproj" />
       <ProjectReference Include="..\..\src\GrahpQL.Client\GraphQL.Api.Client.csproj" />
       <ProjectReference Include="..\..\src\GrahpQL.Web\GraphQL.Web.csproj" />
     </ItemGroup>

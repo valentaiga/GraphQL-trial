@@ -16,6 +16,9 @@ GraphQL over .Net classes realization.
 - [ ] Add DataLoader
 
 ## Environment setup
+Run grafana on localhost with docker:  
+`docker run -d -p 3000:3000 --name=grafana -v grafana-storage:/var/lib/grafana grafana/grafana-enterprise`  
+
 Run the project, Altair UI is on https://localhost:5001/ui/altair  
 Available schemas on right side of a screen.
 

@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\GraphQL.Models\GraphQL.Models.csproj" />
+      <ProjectReference Include="..\GraphQL.Models\GraphQL.Models.csproj" />
     </ItemGroup>
 
 </Project>
